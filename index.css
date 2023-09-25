@@ -1,0 +1,171 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+body
+{
+    height: 100vh;
+    width: 100%;
+    background: rgba(171, 218, 236, 0.375);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main
+{
+    height: 20rem;
+    width: 40rem;
+    position: relative;
+    margin:0 auto;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background: #000;
+}
+header{
+    color: rgba(250, 250, 250, 0.718);
+    height: 4rem;
+    border-radius: inherit;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(168, 168, 168);
+}
+h1
+{
+    font-size: 1rem;
+    margin:0 0.4rem;
+   
+}
+.volume
+{
+    height: inherit;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+.vol_slider
+{
+    padding:0 0.5rem;
+  
+}
+.volume span
+{
+    padding-right: 0.5em;
+    font-size: 1.1rem;
+}
+.vol_slider input
+{
+    width: 5rem;
+    height: 10px;
+}
+.vol_slider input:active
+{
+    accent-color:lightblue;
+    transition: all 0.3s;
+}
+.volume input{
+    accent-color: rgba(41, 177, 63, 0.478);
+}
+.vol_checkbox input
+{  
+    height:1.7em;
+    width: 3.5em;
+    appearance: none;
+    border-radius: 1rem;
+    background: rgb(172, 168, 168);
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+.vol_checkbox input::before
+{
+    content: '';
+    height: 1.3em;
+    width: 1.3em;
+    background: #4a4646;
+   
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    border-radius: inherit;
+    transition:all 0.8s ease;
+}
+.vol_checkbox input:checked
+{
+    transition:all 0.5s ease;
+    background: #4a4646;
+}
+.vol_checkbox input:checked::before
+{
+   margin-left: 1.9em;
+   background: rgba(245, 245, 245, 0.99);
+}
+/* keys css started from Here*/
+.keyblock
+{
+    height: 14rem;
+    margin-top: 1rem;
+    border-radius: inherit;
+    user-select: none;
+
+}
+.keyblock ul{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    position: relative;
+    /* left: 0.6rem; */
+    margin-top: 4px;
+    margin: 0 auto;
+   
+}
+.white
+{
+    background: linear-gradient(#fff 96%,#eee 4%);
+    height: 95%;
+    width: 4rem;  
+    border-left: 1px solid black;     
+    z-index: 0;
+    position: relative;
+    border-radius: 8px 8px 8px 8px;
+}
+.black
+{
+    top:0%;
+    width: 3rem;
+    height: 70%;
+    margin: 0 -26px 0 -26px;
+    position: relative;
+    color: white;
+    z-index: 2;
+    border-radius: 0px 0px 8px 8px;
+    background: linear-gradient(#1a1818,#000 );
+}
+.key span{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom:1rem;
+}
+.keyblock ul .white.active
+{
+    box-shadow:inset -4px -4px 8px rgba(0,0,0,0.2);
+    background:linear-gradient(#fff 0%,#eee 100%); ;
+}
+.keyblock ul .black.active
+{
+    box-shadow:inset -4px -4px 8px rgba(157, 154, 154, 0.026);
+    background: linear-gradient(#000000 100%,#000 0%);
+}
+.keyblock ul .hide span
+{
+    display: none;
+}
+
+
